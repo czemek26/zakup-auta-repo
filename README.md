@@ -1,5 +1,5 @@
 # zakup-auta-repo
-##### First project in HTML&CSS(Bootstrap 5) and vanilla JS
+##### First project in HTML&CSS(Bootstrap 5) and vanilla JS by Przemyslaw Dubikowski
 
 ## General info
 This is my first web application in HTML&CSS and JavaScript.
