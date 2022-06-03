@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles/list.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Zakup auta - Oferta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg auto-hiding-navbar sticky-top">
+        <div class="container-fluid" id="con-flu">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="logo3.png" alt="logo"> Zakup Auta
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Strona główna</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="list.html">Oferta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">O nas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <div id="main">
+        <section class="bg-light ">
+            <h2 class="p-5">Oferta sprzedaży</h2>
+            <div class="container pb-5 cars-list">
+                <!-- Cars list in JS & JSON-->
+            </div>
+        </section>
+
+
+
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content p-3">
+                    <form>
+                        <h6>Wybrane auto: </h6>
+                        <h3 id="select-name" class="mb-5" type="text"></h3>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onchange="saveCarInStorage(),checkInvalid()">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                              Leasing
+                            </label>
+                        </div>
+                        <div class="form-check pb-3">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onchange="saveCarInStorage(),checkInvalid()">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                              Gotówka
+                            </label>
+                            <div class="invalid-feedback" id="feedback-radio2"></div>
+                        </div>
+                        <div class="row p-2 g-3">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="imie" placeholder="Imię" onchange="saveCarInStorage(), checkInvalid()">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="nazwisko" placeholder="Nazwisko" onchange="saveCarInStorage(), checkInvalid()">
+                            </div>
+                        </div>
+                        <div class="row p-2 g-3">
+                            <div class="col-md-5">
+                                <label for="miejsce">Miejsce odbioru</label>
+                                <input type="text" class="form-control" id="miejsce" onchange="saveCarInStorage(), checkInvalid()">
+                            </div>
+                            <div class="col-md-3">
+                                <label for="date">Data odbioru</label>
+                                <input id="date" type="text" class="form-control" disabled readonly/>
+                            </div>
+                        </div>
+                        <!-- Akcesoria -->
+                        <div class="access">
+                            <h5 class="row p- pt-5 g-3">Akcesoria: </h5>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="oponyZimowe" onchange="addAccessoriesPrice()">
+                                <label class="form-check-label" for="oponyZimowe">Zestaw nowych opon zimowych (+2000 zł)</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="gwarancja2" onchange="addAccessoriesPrice()">
+                                <label class="form-check-label" for="gwarancja2">2 lata gwarancji (+7000 zł)</label>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="autoDetailing" onchange="addAccessoriesPrice()">
+                                <label class="form-check-label" for="autoDetailing">Auto-detailing lakieru i reflektorów (+5000 zł)</label>
+                            </div>
+                        </div>
+                        <!-- Akcesoria koniec -->
+
+                        <div id="div-total-price" class="row text-end">
+                            <h6>Cena całkowita:</h6>
+                            <h4 id="total-price"></h4>
+                        </div>
+                        <div class="row p-3 justify-content-end">
+                            <button type="button" class="btn btn-secondary btn-space col-2 close-btn" data-bs-dismiss="modal">Powrót do wyboru</button>
+                            <button type="button" id="final-buy-btn" class="btn btn-primary btn-space col-2" onclick="saveCarInStorage(), checkInvalid(), goToFinal()">Zakup</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="finalModal" aria-hidden="true" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content p-3">
+                    <form>
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="headerFinalModal"></h3>
+                            <button type="button" class="btn-close" onClick="window.location.reload();" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 id="descFinal"></h4>
+                        </div>
+                        <div class="modal-footer">
+                            <img id="imgFinal">
+                            <button type="button" class="btn btn-secondary btn-space col-2 close-btn" onClick="window.location.reload();">Powrót do strony głównej</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- footer -->
+    <div class=" container ">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top ">
+            <p class="col-md-4 mb-0 text-muted ">© 2021 Company, Inc</p>
+
+            <a href="/ " class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none ">
+                <svg class="bi me-2 " width="40 " height="32 "><use xlink:href="#bootstrap "></use></svg>
+            </a>
+
+            <ul class="nav col-md-4 justify-content-end ">
+                <li class="nav-item "><a href="# " class="nav-link px-2 text-muted ">Home</a></li>
+                <li class="nav-item "><a href="# " class="nav-link px-2 text-muted ">Features</a></li>
+                <li class="nav-item "><a href="# " class="nav-link px-2 text-muted ">Pricing</a></li>
+                <li class="nav-item "><a href="# " class="nav-link px-2 text-muted ">FAQs</a></li>
+                <li class="nav-item "><a href="# " class="nav-link px-2 text-muted ">About</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js " integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js " integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy " crossorigin="anonymous "></script>
+    <!-- JS files -->
+    <script src="scripts/global.js "></script>
+</body>
+
+</html>

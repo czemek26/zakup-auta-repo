@@ -1,0 +1,74 @@
+[{
+        "name": "Opel Astra K",
+        "price": 76000,
+        "distance": "25 000 km",
+        "year": "2019",
+        "power": "150 KM",
+        "imgSRC": "cars_images/opel astra.jpg"
+    },
+    {
+        "name": "Mercedes C",
+        "price": 160000,
+        "distance": "30 000 km",
+        "year": "2020",
+        "power": "301 KM",
+        "imgSRC": "cars_images/mercedes c.jpg"
+    },
+    {
+        "name": "Toyota Corolla",
+        "price": 68000,
+        "distance": "36 000 km",
+        "year": "2018",
+        "power": "178 KM",
+        "imgSRC": "cars_images/toyota corolla.jpg"
+    },
+    {
+        "name": "Volkswagen Golf VII",
+        "price": 149000,
+        "distance": "5 km",
+        "year": "2022",
+        "power": "150 KM",
+        "imgSRC": "cars_images/opel astra.jpg"
+    },
+    {
+        "name": "Lexus UX",
+        "price": 75000,
+        "distance": "28 000 km",
+        "year": "2019",
+        "power": "152 KM",
+        "imgSRC": "cars_images/Lexus UX.png"
+    },
+    {
+        "name": "Volvo V90",
+        "price": 169000,
+        "distance": "89 000 km",
+        "year": "2017",
+        "power": "190 KM",
+        "imgSRC": "cars_images/Volvo V90.png"
+    },
+    {
+        "name": "Volvo V90",
+        "price": 169000,
+        "distance": "89 000 km",
+        "year": "2017",
+        "power": "190 KM",
+        "imgSRC": "cars_images/Volvo V90.png"
+    },
+    {
+        "name": "Volvo V90",
+        "price": 169000,
+        "distance": "89 000 km",
+        "year": "2017",
+        "power": "190 KM",
+        "imgSRC": "cars_images/Volvo V90.png"
+    },
+    {
+        "name": "Volvo V90",
+        "price": 169000,
+        "distance": "89 000 km",
+        "year": "2017",
+        "power": "190 KM",
+        "imgSRC": "cars_images/Volvo V90.png"
+    }
+
+]
