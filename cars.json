@@ -28,7 +28,7 @@
         "distance": "5 km",
         "year": "2022",
         "power": "150 KM",
-        "imgSRC": "cars_images/opel astra.jpg"
+        "imgSRC": "cars_images/Volkswagen Golf VII.png"
     },
     {
         "name": "Lexus UX",
@@ -47,28 +47,28 @@
         "imgSRC": "cars_images/Volvo V90.png"
     },
     {
-        "name": "Volvo V90",
-        "price": 169000,
-        "distance": "89 000 km",
-        "year": "2017",
-        "power": "190 KM",
-        "imgSRC": "cars_images/Volvo V90.png"
+        "name": "BMW Seria 3",
+        "price": 21500,
+        "distance": "146 000 km",
+        "year": "2009",
+        "power": "143 KM",
+        "imgSRC": "cars_images/BMW Seria 3.png"
     },
     {
-        "name": "Volvo V90",
-        "price": 169000,
-        "distance": "89 000 km",
-        "year": "2017",
+        "name": "Audi A3",
+        "price": 70000,
+        "distance": "120 000 km",
+        "year": "2016",
         "power": "190 KM",
-        "imgSRC": "cars_images/Volvo V90.png"
+        "imgSRC": "cars_images/Audi A3.png"
     },
     {
-        "name": "Volvo V90",
-        "price": 169000,
-        "distance": "89 000 km",
-        "year": "2017",
-        "power": "190 KM",
-        "imgSRC": "cars_images/Volvo V90.png"
+        "name": "Jaguar F-Pace",
+        "price": 154000,
+        "distance": "33 000 km",
+        "year": "2018",
+        "power": "300 KM",
+        "imgSRC": "cars_images/Jaguar F-Pace.png"
     }
 
 ]

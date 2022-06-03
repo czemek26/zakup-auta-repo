@@ -57,12 +57,10 @@ function purchaseCar(e) {
 // 1.1 get car info after buynow-btn click
 function getCarInfo(car) {
     let carInfo = {
-            id: cartItemID,
-            name: car.querySelector('.car-name').textContent,
-            price: car.querySelector('#car-price').textContent,
-            // imgSRC: document.getElementById('imgTop').src
-        }
-        // localStorage.setItem('imgSRC', car)
+        id: cartItemID,
+        name: car.querySelector('.car-name').textContent,
+        price: car.querySelector('#car-price').textContent,
+    }
     cartItemID++;
     console.log(carInfo)
     addToForm((carInfo));
@@ -214,15 +212,11 @@ function openFinalForm() {
     elemFinalBuy.click();
     let selectName = document.getElementById('select-name').textContent
     let deliveryDate = document.getElementById('date').value
-        // let imgFinal = document.getElementById('imgTop').src
     const elemHeaderFinal = document.getElementById('headerFinalModal');
     const elemDescFinal = document.getElementById('descFinal');
-    // const elemImgFinal = document.getElementById('imgFinal');
     elemHeaderFinal.innerHTML = `Dziękujemy za zakup ${selectName}!`;
     elemDescFinal.innerHTML = `Samochód zostanie dostarczony w dniu ${deliveryDate}`;
-    // elemImgFinal.setAttribute('src', myCar.imgSRC);
 
-    // const imageFinal = document.querySelector('#imgFinal');
 
     localStorage.clear();
 }
